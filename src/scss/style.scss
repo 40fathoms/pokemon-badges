@@ -1,0 +1,88 @@
+@import "config";
+
+.badges-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 400px;
+  width: 95%;
+  max-width: 1000px;
+}
+
+.badge-box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: solid 1px #7d78a3;
+  overflow: hidden;
+  background: #a29cbb;
+  background-size: 400% 400%;
+  animation: TransitioningBackground 10s ease infinite;
+  transition: 0.6s;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+
+  p {
+    font-family: Geneva, Verdana, sans-serif;
+    position: absolute;
+    bottom: 0.5rem;
+    color: #000;
+  }
+
+  // pseudo-element shine animation left side
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    width: 60px;
+    height: 100%;
+    top: 0;
+    filter: blur(30px);
+    transform: translateX(-200px) skewX(-15deg);
+  }
+
+  // pseudo-element shine animation right side
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    width: 30px;
+    height: 100%;
+    top: 0;
+    filter: blur(5px);
+    transform: translateX(-200px) skewX(-15deg);
+  }
+
+  // change background gradient on hover
+  &:hover {
+    border-color: #f1b2ac;
+    background-image: (linear-gradient(to left, #b38bb3, #7d78a3));
+    cursor: pointer;
+
+    // psuedo-elements for right- and left-side shine animations
+    &::before,
+    &::after {
+      transform: translateX(170px) skewX(-15deg);
+      transition: 0.7s;
+    }
+  }
+}
+
+@keyframes TransitioningBackground {
+  0% {
+    background-position: 1% 0%;
+  }
+  50% {
+    background-position: 99% 100%;
+  }
+  100% {
+    background-position: 1% 0%;
+  }
+}

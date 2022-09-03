@@ -1,0 +1,29 @@
+html {
+  font-size: 100%; // control zoom level
+  box-sizing: border-box; // include padding in final width
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: #dbd4e0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
