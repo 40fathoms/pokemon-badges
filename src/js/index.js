@@ -21,8 +21,7 @@ const badges = [
 
   `<div class="marsh-badge">
     <div class="badge part1"></div>
-    <div class="badge part2"></div>
-    <div class="badge part3">
+    <div class="badge part2">
         <div></div>
     </div>
     </div>
