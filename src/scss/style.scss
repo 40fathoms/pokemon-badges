@@ -69,7 +69,7 @@
     background-image: (linear-gradient(to left, #b38bb3, #7d78a3));
     cursor: pointer;
 
-    // psuedo-elements for right- and left-side shine animations
+    // pseudo-elements for right- and left-side shine animations
     &::before,
     &::after {
       transform: translateX(170px) skewX(-15deg);
