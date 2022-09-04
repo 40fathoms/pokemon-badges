@@ -1,0 +1,45 @@
+.marsh-badge {
+  position: relative;
+  width: 180px;
+  height: 180px;
+
+  transform: rotate(-45deg);
+
+  .badge {
+    &.part1 {
+      position: absolute;
+      background: linear-gradient(to bottom, #f0c514 50%, #eeb412 50%);
+      width: 50%;
+      height: 100%;
+      border-radius: 250px 0 0 250px;
+    }
+
+    &.part2 {
+      position: absolute;
+      background: linear-gradient(to bottom, #f0c514 20%, #eeb412 20%);
+      width: 50%;
+      height: 100%;
+      border-radius: 0 150px 150px 0;
+
+      right: 0;
+    }
+
+    &.part3 {
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      border-radius: 100%;
+      background: linear-gradient(to bottom, #f59d21 30%, #f1901d 30%);
+      padding: 5px;
+      inset: 0;
+      margin: auto;
+
+      & > div {
+        background: linear-gradient(to bottom, #f0c514 30%, #eeb412 30%);
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+      }
+    }
+  }
+}
